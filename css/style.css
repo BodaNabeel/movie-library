@@ -1,0 +1,14 @@
+:root {
+  /* General Colors */
+  --color-special: #0079ff;
+  --light-grey: #d3d3d3;
+  --error-bg-color: rgba(235, 103, 103, 0.842);
+
+  /* Dark Mode Colors */
+  --dark-bg-color: #141c2f;
+  --dark-container-color: #1f2a48;
+
+  /* Light Mode Color */
+  --light-bg-color: #f5f8ff;
+  --light-container-color: #ffff;
+}
