@@ -13,4 +13,71 @@
   --light-container-color: #ffff;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--dark-bg-color);
+  color: var(--light-container-color)
+}
+.markup-wrapper {
+  max-width: 80%;
+  margin: 4rem auto 0 auto;
+}
+.heading-main {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.search-field {
+  display: flex;
+  align-items: center;
 
+  background-color: var(--dark-container-color);
+  border-radius: 2rem;
+  max-width: 40rem;
+  overflow: hidden;
+
+  /* border: 2px solid grey; */
+
+}
+.icon-search {
+  color: var(--color-special);
+  font-size: 2rem;
+  margin-left: 1.4rem;
+  position: absolute;
+  width: 20%;
+}
+.input-field {
+  background-color: transparent;
+  border: none;
+  color: #ffff;
+  font-size: 1.4rem;
+  outline: none;
+  padding-left: 5rem;
+  padding: 1.4rem 0;
+  width: 100%;
+}
+
+.container-overview {
+  margin-top: 4rem;
+}
+.container-heading {
+  font-size: 3.5rem;
+}
+.container-display-area{
+  margin: 6rem 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  background-color: var(--dark-container-color);
+  border-radius: 2rem;
+  overflow: hidden;
+  padding-top: 1.2rem;
+  width: 18rem;
+}
+.card-img {
+  width: 15rem;
+  height: 18rem;
+}

@@ -17,55 +17,54 @@
     <title>Movie Library</title>
   </head>
   <body>
-    <h1 class="heading-main">Movie Info</h1>
-
-    <!-- Search Field -->
-    <div class="search-field">
-      <i class="fas fa-search"></i>
-      <input
-        type="text"
-        width="400px"
-        placeholder="Search"
-        class="input-field"
-      />
+    <div class="markup-wrapper">
+      <h1 class="heading-main">Movie Info</h1>
+      <!-- Search Field -->
+      <div class="search-field">
+        <i class="fas fa-search icon-search"></i>
+        <input
+          type="text"
+          width="400px"
+          placeholder="Search movies..."
+          class="input-field"
+        />
+      </div>
+      <!-- Display area (container) -->
+      <main class="container-overview">
+        <!-- TODO: Replace popular with keyword from input-field -->
+        <h2 class="container-heading">Popular</h2>
+        <section class="container-display-area">
+          <div class="card">
+            <img src="test-img.jpg"  alt="Thumbnail of movie" class="card-img" />
+            <p class="movie-name">Naruto</p>
+            <button class="card-btn btn">
+              More Detail <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+        <section class="container-detail">
+          <img src="test-img.jpg" width= "400px" alt="Thumbnail of movie" class="container-detail__img" />
+          <h2 class="container-detail__heading">Naruto</h2>
+          <aside class="container-detail__movie-info">
+            <p class="movie-info__des">Genre: X</p>
+            <p class="movie-info__des">Released: X</p>
+            <p class="movie-info__des">Rated: X</p>
+            <p class="movie-info__des">Rating: X</p>
+            <p class="movie-info__des">Null: X</p>
+          </aside>
+          <div class="container-detail__plot">
+            <h2 class="plot__heading">Plot:</h2>
+            <p class="plot_para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+              soluta blanditiis repellendus quam explicabo repudiandae error eaque
+              rerum deserunt nihil?
+            </p>
+            <button class="plot-btn imbd-btn">IMBD</button>
+            <button class="plot-btn default-btn">Close</button>
+          </div>
+        </section>
+      </main>
     </div>
-
-    <!-- Display area (container) -->
-    <main class="container-overview">
-      <!-- TODO: Replace popular with keyword from input-field -->
-      <h2 class="container-heading">Popular</h2>
-      <section class="container-display-area">
-        <div class="card">
-          <img src="test-img.jpg" width="100px" alt="Thumbnail of movie" class="card-img" />
-          <p class="movie-name">Naruto</p>
-          <button class="card-btn btn">
-            More Detail <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-      </section>
-
-      <section class="container-detail">
-        <img src="test-img.jpg" width= "400px" alt="Thumbnail of movie" class="container-detail__img" />
-        <h2 class="container-detail__heading">Naruto</h2>
-        <aside class="container-detail__movie-info">
-          <p class="movie-info__des">Genre: X</p>
-          <p class="movie-info__des">Released: X</p>
-          <p class="movie-info__des">Rated: X</p>
-          <p class="movie-info__des">Rating: X</p>
-          <p class="movie-info__des">Null: X</p>
-        </aside>
-        <div class="container-detail__plot">
-          <h2 class="plot__heading">Plot:</h2>
-          <p class="plot_para">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
-            soluta blanditiis repellendus quam explicabo repudiandae error eaque
-            rerum deserunt nihil?
-          </p>
-          <button class="plot-btn imbd-btn">IMBD</button>
-          <button class="plot-btn default-btn">Close</button>
-        </div>
-      </section>
-    </main>
     <script
       src="https://kit.fontawesome.com/8f4ba2f307.js"
       crossorigin="anonymous"
