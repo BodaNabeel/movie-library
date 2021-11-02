@@ -71,6 +71,7 @@ body {
 }
 .container-heading {
   font-size: 3.5rem;
+  text-transform: capitalize;
 }
 .container-display-area {
   margin: 2rem 0;
