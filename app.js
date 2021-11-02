@@ -10,7 +10,7 @@ let markup;
 
 // Fetchig overview-API
 async function overview_fetchAPI(e) {
-  const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s="${e}""`);
+  const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s="${e}"`);
   const json = await res.json();
   updateContainer(json);
 }
