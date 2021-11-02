@@ -40,7 +40,7 @@ const updateContainer = function (data) {
       class="card-img"
     />
     <p class="card-name">${data.Search[i].Title}</p>
-    <button class="card-btn btn" id="btn${i}">
+    <button class="card-btn btn" id="btn-${i}">
       More Detail <i class="fas fa-chevron-right"></i>
     </button>
     </div>`;
