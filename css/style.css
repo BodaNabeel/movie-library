@@ -80,7 +80,7 @@ body {
 
   display: flex;
   flex-flow: wrap;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   gap: 2rem;
   row-gap: 7rem;
 }
@@ -93,11 +93,11 @@ body {
   height:30rem;
 
   background-color: var(--dark-container-color);
-  border-radius: 2rem;
+  border-radius: 1rem;
   overflow: hidden;
 }
 .card-img {
-  height: 60%;
+  height: 15rem;
   width: 100%;
   text-align: center;
 }
@@ -105,15 +105,20 @@ body {
   font-weight: 800;
   margin: 0 1rem;
   text-align: center;
+  display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 .card-btn {
   margin-bottom: 0.5rem;
   background-color: var(--color-special);
   color: #ffff;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   max-width:100%;
-  border-radius: 2rem;
+  border-radius: 1rem;
   cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 @media screen and (max-width: 700px) {
   .markup-wrapper {
