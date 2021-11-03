@@ -15,6 +15,14 @@ async function overview_fetchAPI(e) {
   const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s="${e}"`);
   const json = await res.json();
   updateContainer(json);
+  getTitle();
+}
+
+// Fetching detail-API
+async function detail_fetchAPI(e) {
+  const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t="${e}"`);
+  const json = await res.json();
+  console.log(json);
 }
 
 // getting title of card
@@ -25,12 +33,12 @@ const getTitle = function () {
     el.addEventListener("click", function () {
       // console.log(cardTitle[curr].innerHTML)
       let value = cardTitle[curr].innerHTML;
-      return value
+
+      // giving the title as value to detailed_fetchAPI
+      detail_fetchAPI(value);
     });
   });
 };
-
-
 
 // Checking if keyword value is empty or not
 const valueChecker = function (keyword) {
