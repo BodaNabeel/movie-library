@@ -4,7 +4,9 @@ const markupWrapper = document.querySelector(".markup-wrapper");
 const errorMessage = document.querySelector(".error-message");
 const titleMovie = document.querySelector("#title-movie");
 const containerArea = document.querySelector(".container-display-area");
+
 const apiKey = "b082a0d9";
+
 let markup;
 // Functions
 
@@ -14,6 +16,21 @@ async function overview_fetchAPI(e) {
   const json = await res.json();
   updateContainer(json);
 }
+
+// getting title of card
+const getTitle = function () {
+  const cardBtn = document.querySelectorAll(".card-btn");
+  const cardTitle = document.querySelectorAll(".card-name");
+  cardBtn.forEach((el, curr) => {
+    el.addEventListener("click", function () {
+      // console.log(cardTitle[curr].innerHTML)
+      let value = cardTitle[curr].innerHTML;
+      return value
+    });
+  });
+};
+
+
 
 // Checking if keyword value is empty or not
 const valueChecker = function (keyword) {
