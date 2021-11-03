@@ -12,7 +12,9 @@
   --light-bg-color: #f5f8ff;
   --light-container-color: #ffff;
 }
-
+button:hover {
+  cursor: pointer;
+}
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--dark-bg-color);
@@ -123,7 +125,6 @@ body {
 }
 
 .container-detail {
-  display: grid;
   grid-template-columns: 0.5fr 1fr;
   grid-template-rows: 0.3fr 1.3fr max-content;
   grid-gap: 4rem;
