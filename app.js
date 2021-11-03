@@ -75,7 +75,9 @@ const updateOverviewContainer = function (data) {
 
 // Changing DOM for detail-review
 const updateDetailContainer = function (data) {
-  markup = `<img
+  markup = `
+  <div class="top-info">
+  <img
   src="${data.Poster}"
   alt="Thumbnail of movie"
   class="container-detail__img"
@@ -88,6 +90,7 @@ const updateDetailContainer = function (data) {
   <p class="movie-info__des">Rating: ${data.Ratings[0].Value}</p>
   <p class="movie-info__des">Rated: ${data.Rated}</p>
 </aside>
+</div>
 <div class="container-detail__plot">
   <h2 class="plot__heading">Plot:</h2>
   <p class="plot_para">${data.Plot}</p>
