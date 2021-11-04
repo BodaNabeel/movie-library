@@ -6,6 +6,8 @@ const titleMovie = document.querySelector("#title-movie");
 const containerOverviewArea = document.querySelector(".container-display-area");
 const containerDetailArea = document.querySelector(".container-detail");
 const apiKey = "b082a0d9";
+const overlay = document.querySelector(".overlay");
+const body = document.querySelector("body");
 
 let markup;
 // Functions
@@ -31,7 +33,6 @@ const getTitle = function () {
   const cardTitle = document.querySelectorAll(".card-name");
   cardBtn.forEach((el, curr) => {
     el.addEventListener("click", function () {
-      // console.log(cardTitle[curr].innerHTML)
       let value = cardTitle[curr].innerHTML;
 
       // giving the title as value to detailed_fetchAPI
@@ -101,7 +102,10 @@ const updateDetailContainer = function (data) {
 </div>`;
   containerDetailArea.innerHTML = markup;
   containerDetailArea.style.display = "grid";
+  overlay.style.display = "block";
+  body.style.overflow = "hidden";
 };
+
 inputField.addEventListener("keyup", function (e) {
   if (e.keyCode === 13) {
     const keyword = inputField.value;

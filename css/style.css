@@ -21,6 +21,16 @@ body {
   color: var(--light-container-color);
   font-size: 2rem;
 }
+.overlay {
+  display: none;
+  position: absolute;
+  height: 1000rem;
+  width: 100%;
+  background-color: rgba(192, 181, 181, 0.61);
+  margin-top: -4rem;
+  margin-bottom: -7em; 
+  z-index: 1;
+}
 .markup-wrapper {
   margin: 4rem 4rem 0 7rem;
 }
@@ -64,7 +74,6 @@ body {
   text-align: center;
   margin-top: 2rem;
   font-weight: 500;
-
   display: none;
 }
 .container-overview {
@@ -135,7 +144,7 @@ body {
   background-color: var(--dark-container-color);
   height: max-content;
   width: 60rem;
-
+  z-index: 2;
   display: none;
   position: fixed;
   top: 50%;
