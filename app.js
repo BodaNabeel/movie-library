@@ -45,9 +45,9 @@ const getTitle = function () {
 const valueChecker = function (keyword) {
   if (keyword === "") {
     errorMessage.style.display = "block";
-    setTimeout((e) => {
+    setTimeout(() => {
       errorMessage.style.display = "none";
-    }, 1000);
+    }, 2000);
   } else {
     overview_fetchAPI(keyword);
     titleMovie.innerHTML = keyword;
@@ -104,6 +104,13 @@ const updateDetailContainer = function (data) {
   containerDetailArea.style.display = "grid";
   overlay.style.display = "block";
   body.style.overflow = "hidden";
+
+  const closeBtn = document.querySelector(".default-btn")
+  closeBtn.addEventListener("click", () => {
+    overlay.style.display = "none"
+    body.style.overflow ="scroll"
+    containerDetailArea.style.display = "none"
+  })
 };
 
 inputField.addEventListener("keyup", function (e) {
