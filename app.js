@@ -55,7 +55,12 @@ const valueChecker = function (keyword) {
     containerOverviewArea.innerHTML = "";
   }
 };
-
+// Closing detail-overview
+const closeOverview = function () {
+  overlay.style.display = "none";
+  body.style.overflow = "scroll";
+  containerDetailArea.style.display = "none";
+};
 // Changing DOM for overview-review
 const updateOverviewContainer = function (data) {
   for (i = 0; i < data.Search.length; i++) {
@@ -69,7 +74,7 @@ const updateOverviewContainer = function (data) {
     <button class="card-btn btn" id="btn-${i}">
       More Detail <i class="fas fa-chevron-right"></i>
     </button>
-    </div>`;
+  </div>`;
     containerOverviewArea.innerHTML += markup;
   }
 };
@@ -78,39 +83,45 @@ const updateOverviewContainer = function (data) {
 const updateDetailContainer = function (data) {
   markup = `
   <div class="top-info">
-  <img
-  src="${data.Poster}"
-  alt="Thumbnail of movie"
-  class="container-detail__img"
-/>
-<aside class="container-detail__info">
-  <h2 class="container-detail__heading">${data.Title}</h2>
-  <p class="movie-info__des">Genre: ${data.Genre}</p>
-  <p class="movie-info__des">Released: ${data.Released}</p>
-  <p class="movie-info__des">Writer: ${data.Writer}</p>
-  <p class="movie-info__des">Rating: ${data.Ratings[0].Value}</p>
-  <p class="movie-info__des">Rated: ${data.Rated}</p>
-</aside>
-</div>
-<div class="container-detail__plot">
-  <h2 class="plot__heading">Plot:</h2>
-  <p class="plot_para">${data.Plot}</p>
-  <div class="buttons">
-    <button class="plot-btn imbd-btn"> <a class="imbd-link" target="_blank" rel="noopener noreferrer" href="https://www.imdb.com/title/${data.imdbID}/?ref_=fn_al_tt_1">IMBd</a></button>
-    <button class="plot-btn default-btn">Close</button>
-  </div>
-</div>`;
+      <img
+        src="${data.Poster}"
+        alt="Thumbnail of movie"
+        class="container-detail__img"
+      />
+      <aside class="container-detail__info">
+        <h2 class="container-detail__heading">${data.Title}</h2>
+        <p class="movie-info__des">Genre: ${data.Genre}</p>
+        <p class="movie-info__des">Released: ${data.Released}</p>
+        <p class="movie-info__des">Writer: ${data.Writer}</p>
+        <p class="movie-info__des">Rating: ${data.Ratings[0].Value}</p>
+        <p class="movie-info__des">Rated: ${data.Rated}</p>
+      </aside>
+    </div>
+    <div class="container-detail__plot">
+      <h2 class="plot__heading">Plot:</h2>
+      <p class="plot_para">${data.Plot}</p>
+      <div class="buttons">
+        <button class="plot-btn imbd-btn">
+          <a
+            class="imbd-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.imdb.com/title/${data.imdbID}/?ref_=fn_al_tt_1"
+            >IMBd</a
+          >
+        </button>
+        <button class="plot-btn default-btn">Close</button>
+      </div>
+    </div>`;
+
   containerDetailArea.innerHTML = markup;
   containerDetailArea.style.display = "grid";
   overlay.style.display = "block";
   body.style.overflow = "hidden";
 
-  const closeBtn = document.querySelector(".default-btn")
-  closeBtn.addEventListener("click", () => {
-    overlay.style.display = "none"
-    body.style.overflow ="scroll"
-    containerDetailArea.style.display = "none"
-  })
+  const closeBtn = document.querySelector(".default-btn");
+  closeBtn.addEventListener("click", () => closeOverview());
+  overlay.addEventListener("click", () => closeOverview());
 };
 
 inputField.addEventListener("keyup", function (e) {
