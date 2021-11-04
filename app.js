@@ -63,6 +63,11 @@ const closeOverview = function () {
 };
 // Changing DOM for overview-review
 const updateOverviewContainer = function (data) {
+  if (data.Search === undefined) {
+    // alert("Error in data buddy");
+    titleMovie.innerHTML = "ERROR: Movie Not Found"
+  } else {
+  
   for (i = 0; i < data.Search.length; i++) {
     markup = `<div class="card">
     <img
@@ -76,7 +81,7 @@ const updateOverviewContainer = function (data) {
     </button>
   </div>`;
     containerOverviewArea.innerHTML += markup;
-  }
+  }}
 };
 
 // Changing DOM for detail-review
